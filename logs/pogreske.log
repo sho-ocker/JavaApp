@@ -1,0 +1,25 @@
+2020-12-08 13:55:17,165 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:47] Pokrenuta aplikacija
+2020-12-08 13:59:43,078 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:77] Pokrenut početni ekran
+2020-12-08 13:59:43,091 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:77] Pokrenut početni ekran
+2020-12-08 13:59:45,667 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:46] Pokrenuta aplikacija
+2020-12-08 14:05:01,510 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:39] Pokrenuta aplikacija
+2020-12-08 14:05:10,129 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-08 14:05:14,418 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:21] Pokrenut ekran za pretragu županija
+2020-12-08 14:05:20,395 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-08 14:08:01,736 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:42] Pokrenuta aplikacija
+2020-12-08 14:08:07,476 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-08 14:08:09,002 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:54] Ugašena aplikacija
+2020-12-08 14:08:48,755 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-08 14:10:06,620 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:45] Pokrenut ekran za pretragu bolesti
+2020-12-08 14:10:07,893 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-08 14:11:28,573 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-08 14:13:26,263 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-08 14:15:01,472 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-08 14:15:11,053 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-08 14:15:12,995 INFO [JavaFX Application Thread] m.j.s.Main [PretragaOsobaController.java:66] Pretraživanje osoba
+2020-12-08 14:15:15,277 INFO [JavaFX Application Thread] m.j.s.Main [PretragaOsobaController.java:66] Pretraživanje osoba
+2020-12-08 14:15:16,350 INFO [JavaFX Application Thread] m.j.s.Main [PretragaOsobaController.java:66] Pretraživanje osoba
+2020-12-08 14:15:18,163 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-08 14:47:44,352 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-08 14:47:49,776 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-08 14:47:51,968 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija

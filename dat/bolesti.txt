@@ -1,0 +1,9 @@
+1
+Gripa
+1
+2
+Hunjavica
+2
+3
+Prehlada
+2,3

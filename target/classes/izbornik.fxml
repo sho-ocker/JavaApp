@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.sample.PocetniEkranController">
+    <MenuBar fx:id="glavniIzbornik" BorderPane.alignment="CENTER" prefWidth="600.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Županije">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguZupanija" text="Pretraga" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Simptomi">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguSimptoma" text="Pretraga" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Bolesti">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguBolesti" text="Pretraga" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Virusi">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguVirusa" text="Pretraga" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Osobe">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguOsoba" text="Pretraga" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</AnchorPane>

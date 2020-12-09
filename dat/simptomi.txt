@@ -1,0 +1,9 @@
+1
+prviSimptom
+RIJETKO
+2
+drugiSimptom
+SREDNJE
+3
+treciSimptom
+CESTO
