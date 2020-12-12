@@ -23,3 +23,161 @@
 2020-12-08 14:47:44,352 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
 2020-12-08 14:47:49,776 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
 2020-12-08 14:47:51,968 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-10 13:26:40,913 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-10 13:26:48,553 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-10 13:27:12,687 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-10 13:27:27,760 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-10 13:27:31,947 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-10 13:28:47,712 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:45] Pokrenut ekran za pretragu bolesti
+2020-12-10 13:28:49,769 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-10 13:28:52,057 INFO [JavaFX Application Thread] m.j.s.Main [PretragaOsobaController.java:81] Pretraživanje osoba
+2020-12-10 13:28:57,017 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:21] Pokrenut ekran za pretragu županija
+2020-12-10 13:28:59,381 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-10 13:29:08,068 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 12:07:56,507 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:08:15,243 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 12:09:05,526 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 12:09:13,972 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:11:11,100 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:11:55,879 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:15:17,388 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:15:21,418 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:81] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:15:25,437 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 12:15:27,930 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:21] Pokrenut ekran za pretragu županija
+2020-12-12 12:15:29,434 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:81] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:15:31,533 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 12:22:30,764 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:22:37,237 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:22:41,267 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:131] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:22:42,457 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 12:37:18,702 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:38:26,277 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:107] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:38:29,397 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:83] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:38:31,335 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:38:32,819 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:107] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:38:33,911 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:131] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:38:34,901 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:119] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:38:36,824 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:38:38,631 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:83] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:38:44,212 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 12:42:32,739 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:42:37,660 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:83] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:42:41,228 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveZupanijeController.java:22] Dodana nova županija
+2020-12-12 12:42:45,205 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 12:51:23,234 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:51:32,201 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:83] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:51:40,912 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveZupanijeController.java:23] Dodana nova županija
+2020-12-12 12:51:42,452 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:21] Pokrenut ekran za pretragu županija
+2020-12-12 12:52:14,010 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:21] Pokrenut ekran za pretragu županija
+2020-12-12 12:52:15,719 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:83] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:59:08,996 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 12:59:13,899 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:21] Pokrenut ekran za pretragu županija
+2020-12-12 12:59:16,242 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:83] Pokrenut ekran za dodavanje nove županije
+2020-12-12 12:59:25,769 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveZupanijeController.java:24] Dodana nova županija
+2020-12-12 12:59:43,463 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:21] Pokrenut ekran za pretragu županija
+2020-12-12 12:59:57,888 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 13:00:56,374 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 13:01:02,111 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:83] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:01:08,172 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveZupanijeController.java:24] Dodana nova županija
+2020-12-12 13:01:11,946 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:21] Pokrenut ekran za pretragu županija
+2020-12-12 13:01:19,083 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 13:05:02,627 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 13:05:08,954 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 13:05:10,460 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:05:15,207 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:22] Dodanan novi simptom
+2020-12-12 13:10:14,735 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 13:10:20,065 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:10:23,123 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:22] Dodanan novi simptom
+2020-12-12 13:12:08,353 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 13:12:12,336 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:12:17,559 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:22] Dodanan novi simptom
+2020-12-12 13:12:30,673 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:22] Dodanan novi simptom
+2020-12-12 13:12:34,115 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 13:12:36,656 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 13:17:29,477 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 13:17:33,413 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:107] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:17:42,337 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveBolestiController.java:25] Dodanana nova bolest
+2020-12-12 13:17:46,057 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:45] Pokrenut ekran za pretragu bolesti
+2020-12-12 13:17:49,643 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 13:35:18,003 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 13:35:24,344 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 13:35:28,269 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:35:32,005 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:21] Dodanan novi simptom
+2020-12-12 13:35:38,124 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 13:35:39,310 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:35:40,652 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 13:35:46,978 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 13:35:48,609 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 13:35:49,311 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:35:51,381 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:21] Dodanan novi simptom
+2020-12-12 13:35:53,939 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:21] Dodanan novi simptom
+2020-12-12 13:35:56,875 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:21] Dodanan novi simptom
+2020-12-12 13:35:58,798 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 13:36:32,856 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 13:37:02,733 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:37:08,068 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:21] Dodanan novi simptom
+2020-12-12 13:37:10,079 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:21] Dodanan novi simptom
+2020-12-12 13:37:11,433 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNovogSimptomaController.java:21] Dodanan novi simptom
+2020-12-12 13:37:14,540 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 13:41:14,879 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 13:41:19,787 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:107] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:41:23,366 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveBolestiController.java:25] Dodanana nova bolest
+2020-12-12 13:41:26,655 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveBolestiController.java:25] Dodanana nova bolest
+2020-12-12 13:41:29,148 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 13:41:48,957 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 13:41:53,545 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:107] Pokrenut ekran za dodavanje nove županije
+2020-12-12 13:42:48,329 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveBolestiController.java:25] Dodanana nova bolest
+2020-12-12 13:42:50,633 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveBolestiController.java:25] Dodanana nova bolest
+2020-12-12 13:42:53,231 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 18:19:29,434 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 18:19:40,565 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:45] Pokrenut ekran za pretragu bolesti
+2020-12-12 18:19:44,069 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:107] Pokrenut ekran za dodavanje nove županije
+2020-12-12 18:19:49,016 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveBolestiController.java:57] Dodana nova bolest
+2020-12-12 18:19:50,282 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:45] Pokrenut ekran za pretragu bolesti
+2020-12-12 18:19:52,397 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:107] Pokrenut ekran za dodavanje nove županije
+2020-12-12 18:19:53,593 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:144] Pokrenut ekran za dodavanje nove županije
+2020-12-12 18:19:59,879 INFO [JavaFX Application Thread] m.j.s.Main [BrisanjeBolestiController.java:40] Obrisana bolest
+2020-12-12 18:20:01,716 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:45] Pokrenut ekran za pretragu bolesti
+2020-12-12 18:20:07,579 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:144] Pokrenut ekran za dodavanje nove županije
+2020-12-12 18:20:15,195 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 18:24:11,410 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 18:24:17,796 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:57] Pokrenut ekran za pretragu virusa
+2020-12-12 18:24:21,131 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:156] Pokrenut ekran za brisanje virusa
+2020-12-12 18:24:27,335 INFO [JavaFX Application Thread] m.j.s.Main [BrisanjeVirusaController.java:40] Obrisan virus
+2020-12-12 18:24:29,198 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:57] Pokrenut ekran za pretragu virusa
+2020-12-12 18:24:41,703 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:156] Pokrenut ekran za brisanje virusa
+2020-12-12 18:25:08,189 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 18:39:51,839 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 18:39:59,810 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-12 18:40:03,134 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:191] Pokrenut ekran za brisanje osobe
+2020-12-12 18:40:10,769 INFO [JavaFX Application Thread] m.j.s.Main [BrisanjeOsobeController.java:44] Obrisana osoba
+2020-12-12 18:40:13,738 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-12 18:40:17,802 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 19:01:26,377 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:40] Pokrenuta aplikacija
+2020-12-12 19:01:53,862 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:131] Pokrenut ekran za dodavanje nove osobe
+2020-12-12 19:02:34,179 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveOsobeController.java:85] Dodana nova osoba
+2020-12-12 19:02:36,114 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-12 19:02:46,285 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:191] Pokrenut ekran za brisanje osobe
+2020-12-12 19:02:49,863 INFO [JavaFX Application Thread] m.j.s.Main [BrisanjeOsobeController.java:45] Obrisana osoba
+2020-12-12 19:02:50,980 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-12 19:02:52,565 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:50] Ugašena aplikacija
+2020-12-12 19:17:49,417 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-12 19:17:51,744 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-12 19:17:52,416 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:57] Pokrenut ekran za pretragu virusa
+2020-12-12 19:17:53,629 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:45] Pokrenut ekran za pretragu bolesti
+2020-12-12 19:17:54,552 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:95] Pokrenut ekran za dodavanje novog simptoma
+2020-12-12 19:17:55,494 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:21] Pokrenut ekran za pretragu županija
+2020-12-12 19:17:56,778 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:30] Ugašena aplikacija
+2020-12-12 19:18:33,170 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 19:18:35,181 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:30] Ugašena aplikacija
+2020-12-12 19:20:23,805 INFO [main] m.j.s.Main [UnosIzDatoteka.java:29] Pokrenuta aplikacija
+2020-12-12 19:20:31,728 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:33] Pokrenut ekran za pretragu simptoma
+2020-12-12 19:20:34,526 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:45] Pokrenut ekran za pretragu bolesti
+2020-12-12 19:20:37,382 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:191] Pokrenut ekran za brisanje osobe
+2020-12-12 19:20:39,028 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-12 19:20:42,368 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:131] Pokrenut ekran za dodavanje nove osobe
+2020-12-12 19:20:58,828 INFO [JavaFX Application Thread] m.j.s.Main [DodavanjeNoveOsobeController.java:85] Dodana nova osoba
+2020-12-12 19:21:00,364 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:131] Pokrenut ekran za dodavanje nove osobe
+2020-12-12 19:21:01,614 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:69] Pokrenut ekran za pretragu osoba
+2020-12-12 19:21:12,554 INFO [JavaFX Application Thread] m.j.s.Main [PocetniEkranController.java:191] Pokrenut ekran za brisanje osobe
+2020-12-12 19:21:13,814 INFO [JavaFX Application Thread] m.j.s.Main [Main.java:30] Ugašena aplikacija

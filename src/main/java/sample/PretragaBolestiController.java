@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
-public class PretragaBolestiController extends Main implements Initializable{
+public class PretragaBolestiController extends UnosIzDatoteka implements Initializable{
 
     private static ObservableList<Bolest> observableListBolesti;
 

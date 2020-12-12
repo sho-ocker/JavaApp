@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
-public class PretragaVirusaController extends Main implements Initializable {
+public class PretragaVirusaController extends UnosIzDatoteka implements Initializable {
 
     private static ObservableList<Virus> observableListVirusa;
 

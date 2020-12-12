@@ -77,6 +77,129 @@ public class PocetniEkranController extends Main implements Initializable{
         Main.getMainStage().setScene(pretragaOsobaScene);
     }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void dodavanjeNoveZupanijeEkran() throws IOException {
+        logger.info("Pokrenut ekran za dodavanje nove županije");
+        Parent dodajZupanijuFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("dodavanjeNoveZupanije.fxml"));
+        Scene dodajZupanijuScene = new Scene(dodajZupanijuFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajZupanijuScene);
+    }
+
+    public void dodavanjeNovogSimptomaEkran() throws IOException {
+        logger.info("Pokrenut ekran za dodavanje novog simptoma");
+        Parent dodajSimptomFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("dodavanjeNovogSimptoma.fxml"));
+        Scene dodajSimptomScene = new Scene(dodajSimptomFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajSimptomScene);
+    }
+
+    public void dodavanjeNoveBolestiEkran() throws IOException {
+        logger.info("Pokrenut ekran za dodavanje nove bolesti");
+        Parent dodajBolestFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("dodavanjeNoveBolesti.fxml"));
+        Scene dodajBolestScene = new Scene(dodajBolestFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajBolestScene);
+    }
+
+    public void dodavanjeNovogVirusaEkran() throws IOException {
+        logger.info("Pokrenut ekran za dodavanje novog virusa");
+        Parent dodajVirusFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("dodavanjeNovogVirusa.fxml"));
+        Scene dodajVirusScene = new Scene(dodajVirusFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajVirusScene);
+    }
+
+    public void dodavanjeNoveOsobeEkran() throws IOException {
+        logger.info("Pokrenut ekran za dodavanje nove osobe");
+        Parent dodajOsobuFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("dodavanjeNoveOsobe.fxml"));
+        Scene dodajOsobuScene = new Scene(dodajOsobuFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajOsobuScene);
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public void brisanjeZupanijeEkran() throws IOException {
+        logger.info("Pokrenut ekran za brisanje županije");
+        Parent dodajZupanijuFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("brisanjeZupanije.fxml"));
+        Scene dodajZupanijuScene = new Scene(dodajZupanijuFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajZupanijuScene);
+    }
+
+    public void brisanjeSimptomaEkran() throws IOException {
+        logger.info("Pokrenut ekran za brisanje simptoma");
+        Parent dodajSimptomFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("brisanjeSimptoma.fxml"));
+        Scene dodajSimptomScene = new Scene(dodajSimptomFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajSimptomScene);
+    }
+
+    public void brisanjeBolestiEkran() throws IOException {
+        logger.info("Pokrenut ekran za brisanje bolesti");
+        Parent dodajBolestFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("brisanjeBolesti.fxml"));
+        Scene dodajBolestScene = new Scene(dodajBolestFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajBolestScene);
+    }
+
+    public void brisanjeVirusaEkran() throws IOException {
+        logger.info("Pokrenut ekran za brisanje virusa");
+        Parent dodajVirusFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("brisanjeVirusa.fxml"));
+        Scene dodajVirusScene = new Scene(dodajVirusFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajVirusScene);
+    }
+
+    public void brisanjeOsobeEkran() throws IOException {
+        logger.info("Pokrenut ekran za brisanje osobe");
+        Parent dodajOsobuFrame =
+                FXMLLoader.load(getClass().getClassLoader().getResource("brisanjeOsobe.fxml"));
+        Scene dodajOsobuScene = new Scene(dodajOsobuFrame);
+
+        Stage stage = (Stage) glavniIzbornik.getScene().getWindow();
+
+        Main.setMainStage(stage);
+        Main.getMainStage().setScene(dodajOsobuScene);
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }

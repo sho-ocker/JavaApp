@@ -25,6 +25,10 @@ public class Zupanija extends ImenovaniEntitet implements Serializable {
         this.brojZarazenih = brojZarazenih;
     }
 
+    public Zupanija() {
+
+    }
+
     /**
      * getter stanovnika
      *
