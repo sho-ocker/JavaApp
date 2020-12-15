@@ -1,6 +1,8 @@
 package main.java.sample;
 
 import hr.java.covidportal.model.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,11 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UnosIzDatoteka {
-    protected static List<Zupanija> zupanijeIzDat = new ArrayList<>();
-    protected static List<Simptom> simptomiIzDat = new ArrayList<>();
-    protected static List<Bolest> bolestiIzDat = new ArrayList<>();
-    protected static List<Virus> virusiIzDat = new ArrayList<>();
-    protected static List<Osoba> osobeIzDat = new ArrayList<>();
+    protected static ObservableList<Zupanija> zupanijeIzDat = FXCollections.observableArrayList();
+    protected static ObservableList<Simptom> simptomiIzDat = FXCollections.observableArrayList();
+    protected static ObservableList<Bolest> bolestiIzDat = FXCollections.observableArrayList();
+    protected static ObservableList<Virus> virusiIzDat = FXCollections.observableArrayList();
+    protected static ObservableList<Osoba> osobeIzDat = FXCollections.observableArrayList();
 
     protected static File zupanijeDat = new File("dat/zupanije.txt");
     protected static File simptomiDat = new File("dat/simptomi.txt");

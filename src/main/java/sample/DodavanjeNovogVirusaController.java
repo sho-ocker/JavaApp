@@ -2,55 +2,59 @@ package main.java.sample;
 
 import hr.java.covidportal.model.Simptom;
 import hr.java.covidportal.model.Virus;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 
-public class DodavanjeNovogVirusaController extends UnosIzDatoteka{
+public class DodavanjeNovogVirusaController extends UnosIzDatoteka implements Initializable {
 
     @FXML
     private TextField nazivVirusa;
 
     @FXML
-    private TextField IDsimptoma;
+    private ListView<Simptom> ListViewSimptoma;
 
 
     public void dodajVirus(){
         String naziv = nazivVirusa.getText();
-        String[] listaID = IDsimptoma.getText().split(",");
-        List<Simptom> listaSimptoma = new ArrayList<>();
-        Boolean zastavica = false;
+        ObservableList<Simptom> odabraniSimptomi;
 
-        for(String stringSimp : listaID)
-            if(Integer.parseInt(stringSimp) > simptomiIzDat.get(simptomiIzDat.size()-1).getId()){
-                zastavica = true;
-                break;
+        odabraniSimptomi = ListViewSimptoma.getSelectionModel().getSelectedItems();
+
+        Long lastID = virusiIzDat.get(virusiIzDat.size()-1).getId() + 1;
+
+        virusiIzDat.add(new Virus(naziv, odabraniSimptomi, lastID));
+        try(FileWriter fw = new FileWriter("dat/virusi.txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            out.println("\n" + lastID);
+            out.println(naziv);
+            int br=0;
+            for(Simptom simp : odabraniSimptomi){
+                br++;
+                out.print(simp.getId());
+                if(br == odabraniSimptomi.size())
+                    break;
+                out.print(",");
             }
-
-
-        if(zastavica){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Pokušajte ponovno");
-            alert.setContentText("Ne postoji uneseni simptom!");
-            alert.showAndWait();
-            return;
+        } catch (IOException e) {
+            System.err.println(e);
         }
-
-        for(Simptom simp : simptomiIzDat) {
-            for (String stringSimp : listaID) {
-                if (simp.getId().toString().equals(stringSimp)) {
-                    listaSimptoma.add(simp);
-                }
-            }
-        }
-
-        Long lastID = virusiIzDat.get(virusiIzDat.size()-1).getId();
-
-        virusiIzDat.add(new Virus(naziv, listaSimptoma, lastID+1));
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Spremanje podatka");
@@ -59,4 +63,9 @@ public class DodavanjeNovogVirusaController extends UnosIzDatoteka{
         logger.info("Dodan novi virus");
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ListViewSimptoma.setItems(simptomiIzDat);
+        ListViewSimptoma.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    }
 }

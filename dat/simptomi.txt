@@ -7,3 +7,12 @@ SREDNJE
 3
 treciSimptom
 CESTO
+4
+cetvrtiSimptom
+SREDNJE
+5
+peti
+SREDNJE
+6
+sesti
+CESTO

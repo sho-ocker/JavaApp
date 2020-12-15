@@ -26,3 +26,10 @@ Petricic
 2
 bolest,2
 1,2
+5
+ime
+prezime
+22
+2
+bolest,1
+1,2

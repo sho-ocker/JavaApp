@@ -7,3 +7,9 @@ Hunjavica
 3
 Prehlada
 2,3
+4
+novaBolest
+2,3
+5
+bolest
+1
