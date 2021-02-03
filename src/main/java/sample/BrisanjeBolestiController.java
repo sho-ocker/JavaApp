@@ -1,38 +1,57 @@
 package main.java.sample;
 
 import hr.java.covidportal.model.Bolest;
+import hr.java.covidportal.model.Osoba;
+import hr.java.covidportal.model.Simptom;
+import hr.java.covidportal.model.Virus;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class BrisanjeBolestiController extends UnosIzDatoteka{
+
+public class BrisanjeBolestiController extends BazaPodataka implements Initializable {
+
+    ObservableList<Bolest> pomListaBolesti = FXCollections.observableArrayList(listaBolestiIVirusa);
 
     @FXML
-    private TextField nazivBolesti;
+    private ListView<Bolest> listViewBolesti;
 
 
-    public void obrisiBolest(){
-        String naziv = nazivBolesti.getText();
+    public void obrisiBolest() throws IOException, SQLException, InterruptedException {
+        List<Bolest> odabraneBolesti;
+        odabraneBolesti = listViewBolesti.getSelectionModel().getSelectedItems();
 
-        Boolean zastavica = false;
+        Connection veza = connectToDatabase();
 
-        for(Bolest bol : bolestiIzDat) {
-            if (bol.getNaziv().equals(naziv)){
-                zastavica = true;
-                break;
+        for(Bolest bol : odabraneBolesti) {
+            PreparedStatement st1 = veza.prepareStatement("DELETE FROM BOLEST_SIMPTOM WHERE BOLEST_ID =?");
+            st1.setString(1, bol.getId().toString());
+            st1.executeUpdate();
+            PreparedStatement st2 = veza.prepareStatement("DELETE FROM BOLEST WHERE NAZIV = ?");
+            st2.setString(1, bol.getNaziv());
+            st2.executeUpdate();
+            pomListaBolesti.remove(bol);
+            listaBolestiIVirusa.remove(bol);
+            if(bol instanceof Virus) {
+                listaVirusa.remove(bol);
+            }else{
+                listaBolesti.remove(bol);
             }
         }
-
-        if(!zastavica){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Pokušajte ponovno");
-            alert.setContentText("Ne postoji tražena bolest!");
-            alert.showAndWait();
-            return;
-        }
-
-        bolestiIzDat.removeIf(bolest -> bolest.getNaziv().equals(naziv));
+        closeDatabaseConnection(veza);
 
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -42,4 +61,15 @@ public class BrisanjeBolestiController extends UnosIzDatoteka{
         logger.info("Obrisana bolest");
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        for(Osoba oso : listaOsoba){
+            for(Bolest bol : listaBolestiIVirusa){
+                if(oso.getZarazenBolescu().equals(bol))
+                    pomListaBolesti.remove(bol);
+            }
+        }
+        listViewBolesti.setItems(pomListaBolesti);
+        listViewBolesti.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    }
 }

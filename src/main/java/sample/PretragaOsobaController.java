@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
-public class PretragaOsobaController extends UnosIzDatoteka implements Initializable {
+public class PretragaOsobaController extends BazaPodataka implements Initializable {
 
     private static ObservableList<Osoba> observableListOsoba;
 
@@ -53,12 +53,12 @@ public class PretragaOsobaController extends UnosIzDatoteka implements Initializ
     public void initialize(URL url, ResourceBundle resourceBundle){
         stupacIme.setCellValueFactory(new PropertyValueFactory<>("ime"));
         stupacPrezime.setCellValueFactory(new PropertyValueFactory<>("prezime"));
-        stupacStarost.setCellValueFactory(new PropertyValueFactory<>("starost"));
+        stupacStarost.setCellValueFactory(new PropertyValueFactory<>("datum_rodenja"));
         stupacBolest.setCellValueFactory(new PropertyValueFactory<>("zarazenBolescu"));
         stupacZupanija.setCellValueFactory(new PropertyValueFactory<>("zupanija"));
         stupacKontakti.setCellValueFactory(new PropertyValueFactory<>("kontaktiraneOsobe"));
 
-        observableListOsoba = FXCollections.observableArrayList(osobeIzDat);
+        observableListOsoba = FXCollections.observableArrayList(listaOsoba);
         tablicaOsoba.setItems(observableListOsoba);
     }
 
@@ -67,7 +67,7 @@ public class PretragaOsobaController extends UnosIzDatoteka implements Initializ
         String ime = imeOsobe.getText();
         String prezime = prezimeOsobe.getText();
 
-        List<Osoba> filtriranaListaOsoba = osobeIzDat.stream()
+        List<Osoba> filtriranaListaOsoba = listaOsoba.stream()
                 .filter(z -> z.getIme().toLowerCase().contains(ime) && z.getPrezime().toLowerCase().contains(prezime))
                 .collect(Collectors.toList());
 

@@ -1,10 +1,18 @@
 package hr.java.covidportal.enums;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+import java.util.Arrays;
+import java.util.List;
+
 public enum Simptomi {
 
-    RIJETKO("RIJETKO"),
-    SREDNJE("SREDNJE"),
-    CESTO("ČESTO");
+    Produktivni("Produktivni"),
+    Intenzivno("Intenzivno"),
+    Visoka("Visoka"),
+    Jaka("Jaka");
+
 
     private String vrijednost;
 
@@ -15,4 +23,5 @@ public enum Simptomi {
     public String getVrijednost() {
         return vrijednost;
     }
+
 }

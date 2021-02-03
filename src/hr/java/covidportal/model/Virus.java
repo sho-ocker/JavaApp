@@ -1,5 +1,7 @@
 package hr.java.covidportal.model;
 
+import javafx.collections.ObservableList;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -26,6 +28,10 @@ public class Virus extends Bolest implements Zarazno, Serializable {
 
     public Virus(String naziv, Long id) {
         super(naziv, id);
+    }
+
+    public Virus(String naziv, List<Simptom> simptomi, Boolean virus, Long id) {
+        super(naziv, simptomi, virus, id);
     }
 
     /**

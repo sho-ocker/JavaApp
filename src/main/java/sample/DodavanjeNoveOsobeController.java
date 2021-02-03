@@ -2,24 +2,24 @@ package main.java.sample;
 
 
 import hr.java.covidportal.model.*;
+import hr.java.covidportal.niti.SpremiOsobuNit;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
+import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 
-public class DodavanjeNoveOsobeController extends UnosIzDatoteka implements Initializable {
+public class DodavanjeNoveOsobeController extends BazaPodataka implements Initializable {
 
     @FXML
     private TextField imeOsobe;
@@ -28,7 +28,7 @@ public class DodavanjeNoveOsobeController extends UnosIzDatoteka implements Init
     private TextField prezimeOsobe;
 
     @FXML
-    private TextField starostOsobe;
+    private DatePicker starostOsobe;
 
     @FXML
     private ListView<Bolest> ListViewBolesti;
@@ -40,23 +40,44 @@ public class DodavanjeNoveOsobeController extends UnosIzDatoteka implements Init
     private ListView<Osoba> ListViewOsoba;
 
 
-    public void dodajOsobu(){
+    public void dodajOsobu() throws SQLException, IOException, InterruptedException {
         String ime = imeOsobe.getText();
         String prezime = prezimeOsobe.getText();
-        String starost = starostOsobe.getText();
+        LocalDate datum = starostOsobe.getValue();
 
         Zupanija odabranaZupanija;
         Bolest odabranaBolest;
         ObservableList<Osoba> odabraniKontakti;
 
+
         odabranaZupanija = ListViewZupanija.getSelectionModel().getSelectedItem();
         odabranaBolest = ListViewBolesti.getSelectionModel().getSelectedItem();
         odabraniKontakti = ListViewOsoba.getSelectionModel().getSelectedItems();
 
-        Long lastID = osobeIzDat.get(osobeIzDat.size()-1).getId() + 1;
+        Long lastID = listaOsoba.get(listaOsoba.size()-1).getId()+1;
 
-        osobeIzDat.add(new Osoba.Builder(ime, prezime)
-                .setStarost(Integer.parseInt(starost))
+
+
+        if(ime.isEmpty() || prezime.isEmpty() || datum == null || odabranaZupanija == null || odabranaBolest == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Greška u spremanju");
+            alert.setContentText("Sva polja moraju biti popunjena!");
+            alert.showAndWait();
+            return;
+        }
+
+        Osoba pom = new Osoba.Builder(ime, prezime)
+                .setDatumRodenja(datum)
+                .setStarost()
+                .setZupanija(odabranaZupanija)
+                .setZarazenBolescu(odabranaBolest)
+                .setKontaktiraneOsobe(odabraniKontakti)
+                .setId(lastID)
+                .build();
+
+        listaOsoba.add(new Osoba.Builder(ime, prezime)
+                .setDatumRodenja(datum)
+                .setStarost()
                 .setZupanija(odabranaZupanija)
                 .setZarazenBolescu(odabranaBolest)
                 .setKontaktiraneOsobe(odabraniKontakti)
@@ -64,7 +85,18 @@ public class DodavanjeNoveOsobeController extends UnosIzDatoteka implements Init
                 .build()
         );
 
-        try(FileWriter fw = new FileWriter("dat/osobe.txt", true);
+        SpremiOsobuNit nitOsoba = new SpremiOsobuNit("OSOBA", pom);
+        service.execute(nitOsoba);
+
+     /*   spremiNovuOsobu(new Osoba.Builder(ime, prezime)
+                .setDatumRodenja(datum)
+                .setZupanija(odabranaZupanija)
+                .setZarazenBolescu(odabranaBolest)
+                .setKontaktiraneOsobe(odabraniKontakti)
+                .setId(lastID)
+                .build());  */
+
+   /*     try(FileWriter fw = new FileWriter("dat/osobe.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
@@ -89,7 +121,7 @@ public class DodavanjeNoveOsobeController extends UnosIzDatoteka implements Init
 
         } catch (IOException e) {
             System.err.println(e);
-        }
+        }   */
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Spremanje podatka");
@@ -100,16 +132,11 @@ public class DodavanjeNoveOsobeController extends UnosIzDatoteka implements Init
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList <Bolest> sveBolesti = FXCollections.observableArrayList();
-        for(Virus vir : virusiIzDat)
-            sveBolesti.add(vir);
-        for(Bolest bol : bolestiIzDat)
-            sveBolesti.add(bol);
-        ListViewZupanija.setItems(zupanijeIzDat);
+        ListViewZupanija.setItems(listaZupanija);
         ListViewZupanija.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        ListViewBolesti.setItems(sveBolesti);
+        ListViewBolesti.setItems(listaBolestiIVirusa);
         ListViewBolesti.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-        ListViewOsoba.setItems(osobeIzDat);
+        ListViewOsoba.setItems(listaOsoba);
         ListViewOsoba.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 }

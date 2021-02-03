@@ -174,7 +174,7 @@ public class Glavna {
         System.out.println("\nPopis osoba: \n");
         for(int i=0; i<osobe.size(); i++){
             System.out.println("Ime i prezime: " + osobe.get(i).getIme() + " " + osobe.get(i).getPrezime());
-            System.out.println("Starost: " + osobe.get(i).getStarost());
+           // System.out.println("Starost: " + osobe.get(i).getStarost());
             System.out.println("Županija prebivališta: " + osobe.get(i).getZupanija().getNaziv());
             System.out.println("Zaražen bolešću: " + osobe.get(i).getZarazenBolescu().getNaziv());
             System.out.println("Kontaktirane osobe:");
@@ -314,7 +314,7 @@ public class Glavna {
                             listaOsoba.add(oso);
 
                 osobeIzDat.add(new Osoba.Builder(ime,prezime)
-                        .setStarost(starost)
+                      //  .setStarost(starost)
                         .setZupanija(odabranaZupanija)
                         .setZarazenBolescu(odabranaBolest)
                         .setKontaktiraneOsobe(listaOsoba)

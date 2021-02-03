@@ -16,11 +16,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Rakocija-8" />
+        <module name="Rakocija-10" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Rakocija-8" target="15" />
+      <module name="Rakocija-10" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>

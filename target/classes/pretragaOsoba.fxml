@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.sample.PretragaOsobaController">
+<AnchorPane styleClass="background" stylesheets="@css/css.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.sample.PretragaOsobaController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <center>
@@ -22,11 +22,11 @@
                   <TableView fx:id="tablicaOsoba" prefHeight="210.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                     <columns>
                       <TableColumn fx:id="stupacIme" prefWidth="70.0" text="Ime" />
-                        <TableColumn fx:id="stupacPrezime" prefWidth="75.0" text="Prezime" />
-                      <TableColumn fx:id="stupacStarost" minWidth="0.0" prefWidth="50.0" text="Starost" />
-                        <TableColumn fx:id="stupacZupanija" prefWidth="100.0" text="Županija" />
-                        <TableColumn fx:id="stupacBolest" prefWidth="75.0" text="Bolest" />
-                        <TableColumn fx:id="stupacKontakti" prefWidth="230.0" text="Kontaktirane osobe" />
+                        <TableColumn fx:id="stupacPrezime" text="Prezime" />
+                      <TableColumn fx:id="stupacStarost" text="Starost" />
+                        <TableColumn fx:id="stupacZupanija" text="Županija" />
+                        <TableColumn fx:id="stupacBolest" prefWidth="70.0" text="Bolest" />
+                        <TableColumn fx:id="stupacKontakti" prefWidth="220.0" text="Kontaktirane osobe" />
                     </columns>
                   </TableView>
                </bottom>
@@ -44,10 +44,13 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="Ime osobe" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                        <Label text="Ime osobe:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="20.0" right="20.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
                         </Label>
                         <TextField fx:id="imeOsobe" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
@@ -58,10 +61,13 @@
                            <GridPane.margin>
                               <Insets top="20.0" />
                            </GridPane.margin></Button>
-                        <Label text="Prezime osobe" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                        <Label text="Prezime osobe:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets right="20.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
                         </Label>
                          <TextField fx:id="imeOsobe" GridPane.columnIndex="1" GridPane.rowIndex="1">
                              <GridPane.margin>
@@ -79,7 +85,7 @@
                <top>
                   <Label text="Pretraživanje osoba" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="System Bold" size="28.0" />
                      </font>
                      <BorderPane.margin>
                         <Insets top="10.0" />

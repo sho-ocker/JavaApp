@@ -1,6 +1,8 @@
 package hr.java.covidportal.model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,24 +13,35 @@ import java.util.Objects;
 public class Osoba implements Serializable {
     private final String ime;
     private final String prezime;
+    private final LocalDate datum_rodenja;
     private final Integer starost;
     private final Zupanija zupanija;
     private Bolest zarazenBolescu;
     private final List<Osoba> kontaktiraneOsobe;
     private final Long id;
 
+
+    public Integer getStarost(LocalDate birthDate, LocalDate currentDate){
+        if ((birthDate != null) && (currentDate != null)) {
+            return Period.between(birthDate, currentDate).getYears();
+        } else {
+            return 0;
+        }
+    }
+
     /**
      * Konstruktor osobe sa svim atributima
      */
 
-    public Osoba(Builder builder){
+    public Osoba(Builder builder) {
         this.ime = builder.ime;
         this.prezime = builder.prezime;
-        this.starost = builder.starost;
+        this.datum_rodenja = builder.datum_rodenja;
         this.zupanija = builder.zupanija;
         this.zarazenBolescu = builder.zarazenBolescu;
         this.kontaktiraneOsobe = builder.kontaktiraneOsobe;
         this.id = builder.id;
+        this.starost = getStarost(datum_rodenja, LocalDate.now());
     }
 
     /**
@@ -37,32 +50,41 @@ public class Osoba implements Serializable {
      * @return -> vraćaju traženi atribut
      */
 
+
+
     public String getIme() {
         return ime;
+    }
+
+    public LocalDate getDatum_rodenja() {
+        return datum_rodenja;
     }
 
     public String getPrezime() {
         return prezime;
     }
-    public Integer getStarost(){
-        return starost;
-    }
+
+
     public Zupanija getZupanija() {
         return zupanija;
     }
+
     public Bolest getZarazenBolescu() {
         return zarazenBolescu;
     }
+
     public List<Osoba> getKontaktiraneOsobe() {
         return kontaktiraneOsobe;
     }
+
     public Long getId() {
         return id;
     }
 
-    public void setZarazenVirusom(Virus virus){
+    public void setZarazenVirusom(Virus virus) {
         this.zarazenBolescu = virus;
     }
+
     public void setZarazenBolescu(Bolest zarazenBolescu) {
         this.zarazenBolescu = zarazenBolescu;
     }
@@ -90,6 +112,7 @@ public class Osoba implements Serializable {
     public static class Builder {
         private String ime;
         private String prezime;
+        private LocalDate datum_rodenja;
         private Integer starost;
         private Zupanija zupanija;
         private Bolest zarazenBolescu;
@@ -103,7 +126,7 @@ public class Osoba implements Serializable {
             Builder builder = (Builder) o;
             return Objects.equals(ime, builder.ime) &&
                     Objects.equals(prezime, builder.prezime) &&
-                    Objects.equals(starost, builder.starost) &&
+                    Objects.equals(datum_rodenja, builder.datum_rodenja) &&
                     Objects.equals(zupanija, builder.zupanija) &&
                     Objects.equals(zarazenBolescu, builder.zarazenBolescu) &&
                     Objects.equals(kontaktiraneOsobe, builder.kontaktiraneOsobe);
@@ -111,7 +134,7 @@ public class Osoba implements Serializable {
 
         @Override
         public int hashCode() {
-            return Objects.hash(ime, prezime, starost, zupanija, zarazenBolescu, kontaktiraneOsobe);
+            return Objects.hash(ime, prezime, datum_rodenja, zupanija, zarazenBolescu, kontaktiraneOsobe);
         }
 
 
@@ -122,10 +145,16 @@ public class Osoba implements Serializable {
 
         /**
          * setteri za atribute koje sadrži klasa osoba
+         * @param
          */
 
-        public Builder setStarost(Integer starost) {
-            this.starost = starost;
+        public Builder setDatumRodenja(LocalDate datum) {
+            this.datum_rodenja = datum;
+            return this;
+        }
+
+        public Builder setStarost() {
+            this.starost = build().getStarost(datum_rodenja, LocalDate.now());
             return this;
         }
 
@@ -149,6 +178,7 @@ public class Osoba implements Serializable {
             return this;
         }
 
+
         /**
          * Služi za konstruiranje osobe i dodavanje svih njenih atributa, te širenje virusa ako osoba u polju
          * kontaktiranih osoba sadrži određene osobe
@@ -167,46 +197,4 @@ public class Osoba implements Serializable {
             return osoba;
         }
     }
-
-
-  /* public Osoba(String ime, String prezime, Integer starost, Zupanija zupanija, Bolest zarazenBolescu,
-                 Osoba[] kontaktiraneOsobe) {
-        this.ime = ime;
-        this.prezime = prezime;
-        this.starost = starost;
-        this.zupanija = zupanija;
-        this.zarazenBolescu = zarazenBolescu;
-        this.kontaktiraneOsobe = kontaktiraneOsobe;
-
-        if(zarazenBolescu instanceof Virus ){
-            if(kontaktiraneOsobe != null)
-               for (int i=0; i<kontaktiraneOsobe.length; i++)
-                   if(kontaktiraneOsobe[i] != null)
-                        kontaktiraneOsobe[i].setZarazenBolescu(zarazenBolescu);
-        }
-
-
-    public void setIme(String ime) {
-        this.ime = ime;
-    }
-
-    public void setPrezime(String prezime) {
-        this.prezime = prezime;
-    }
-
-    public void setStarost(Integer starost) {
-        this.starost = starost;
-    }
-
-    public void setZupanija(Zupanija zupanija) {
-        this.zupanija = zupanija;
-    }
-
-    public void setZarazenBolescu(Bolest zarazenBolescu) {
-        this.zarazenBolescu = zarazenBolescu;
-    }
-
-    public void setKontaktiraneOsobe(Osoba[] kontaktiraneOsobe) {
-        this.kontaktiraneOsobe = kontaktiraneOsobe;
-    }*/
 }

@@ -1,44 +1,55 @@
 package main.java.sample;
 
+import hr.java.covidportal.model.Osoba;
 import hr.java.covidportal.model.Zupanija;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 
 import java.io.*;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.ResourceBundle;
 
 
-public class BrisanjeZupanijeController extends UnosIzDatoteka{
+public class BrisanjeZupanijeController extends BazaPodataka implements Initializable {
+
+    ObservableList<Zupanija> pomListaZupanija = FXCollections.observableArrayList(listaZupanija);
 
     @FXML
-    private TextField nazivZupanije;
+    private ListView<Zupanija> listViewZupanija;
 
 
-    public void obrisiZupaniju(){
-        String naziv = nazivZupanije.getText();
-        Boolean zastavica = false;
+    public void obrisiZupaniju() throws IOException, SQLException, InterruptedException {
+        List<Zupanija> odabraneZupanije;
+        odabraneZupanije = listViewZupanija.getSelectionModel().getSelectedItems();
 
-        for(Zupanija zup : zupanijeIzDat){
-            if(zup.getNaziv().equals(naziv)) {
-                zastavica = true;
-                //zupanijaTrazena = zup;
-                break;
-            }
+
+        Connection veza = connectToDatabase();
+
+
+        for(Zupanija zup : odabraneZupanije) {
+            PreparedStatement st = veza.prepareStatement("DELETE FROM ZUPANIJA WHERE NAZIV = ?");
+            st.setString(1, zup.getNaziv());
+            st.executeUpdate();
+            listaZupanija.remove(zup);
+            pomListaZupanija.remove(zup);
         }
+        closeDatabaseConnection(veza);
 
-        if(!zastavica){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Pokušajte ponovno");
-            alert.setContentText("Ne postoji tražena županija!");
-            alert.showAndWait();
-            return;
-        }
 
-        zupanijeIzDat.removeIf(zupanija -> zupanija.getNaziv().equals(naziv));
 
       /*  try{
             File tempFile = new File(zupanijeDat.getAbsolutePath() + ".tmp");
@@ -77,4 +88,15 @@ public class BrisanjeZupanijeController extends UnosIzDatoteka{
         logger.info("Obrisana županija");
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        for(Osoba oso : listaOsoba){
+            for(Zupanija zup : listaZupanija){
+                if(oso.getZupanija().equals(zup))
+                    pomListaZupanija.remove(zup);
+            }
+        }
+        listViewZupanija.setItems(pomListaZupanija);
+        listViewZupanija.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+    }
 }

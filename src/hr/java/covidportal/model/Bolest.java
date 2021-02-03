@@ -1,6 +1,8 @@
 package hr.java.covidportal.model;
 
 
+import javafx.collections.ObservableList;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
@@ -10,9 +12,8 @@ import java.util.Objects;
  */
 
 public class Bolest extends ImenovaniEntitet implements Serializable {
-    private String naziv;
     private List<Simptom> simptomi;
-    private Long id;
+    private Boolean virus;
 
     /**
      * Konstruktor s nazivom i poljem simptoma kao parametrima
@@ -21,10 +22,18 @@ public class Bolest extends ImenovaniEntitet implements Serializable {
      * @param simptomi -> polje simptoma koji određuju simptome bolesti
      */
 
-    public Bolest(String naziv, List<Simptom> simptomi, Long id) {
+    public Bolest(String naziv, List<Simptom> simptomi, Boolean virus, Long id) {
         super(naziv, id);
         this.simptomi = simptomi;
+        this.virus = virus;
     }
+
+    public Bolest(String naziv, Boolean virus){
+        super(naziv);
+        this.virus = virus;
+    }
+
+
 
     public Bolest() {
         super();
@@ -32,6 +41,15 @@ public class Bolest extends ImenovaniEntitet implements Serializable {
 
     public Bolest(String naziv, Long id) {
         super(naziv, id);
+    }
+
+    public Bolest(String naziv, List<Simptom> simptomi, Long id) {
+    }
+
+    public Bolest(String naziv, List<Simptom> simptomi, boolean virus) {
+        super(naziv);
+        this.simptomi = simptomi;
+        this.virus = virus;
     }
 
     /**
@@ -43,6 +61,11 @@ public class Bolest extends ImenovaniEntitet implements Serializable {
     public List<Simptom> getSimptomi() {
         return simptomi;
     }
+
+    public Boolean getVirus() {
+        return virus;
+    }
+
 
 
     /**

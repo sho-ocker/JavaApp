@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
-public class PretragaSimptomaController extends UnosIzDatoteka implements Initializable {
+public class PretragaSimptomaController extends BazaPodataka implements Initializable {
 
     private static ObservableList<Simptom> observableListSimptoma;
 
@@ -37,7 +37,7 @@ public class PretragaSimptomaController extends UnosIzDatoteka implements Initia
         stupacNaziv.setCellValueFactory(new PropertyValueFactory<>("naziv"));
         stupacVrijednost.setCellValueFactory(new PropertyValueFactory<>("vrijednost"));
 
-        observableListSimptoma = FXCollections.observableArrayList(simptomiIzDat);
+        observableListSimptoma = FXCollections.observableArrayList(listaSimptoma);
         tablicaSimptoma.setItems(observableListSimptoma);
     }
 
@@ -45,7 +45,7 @@ public class PretragaSimptomaController extends UnosIzDatoteka implements Initia
         logger.info("Pretraživanje simptoma");
         String naziv = nazivSimptoma.getText();
 
-        List<Simptom> filtriranaListaSimptoma = simptomiIzDat.stream()
+        List<Simptom> filtriranaListaSimptoma = listaSimptoma.stream()
                 .filter(z -> z.getNaziv().toLowerCase().contains(naziv))
                 .collect(Collectors.toList());
 

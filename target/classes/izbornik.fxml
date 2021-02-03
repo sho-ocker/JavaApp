@@ -25,18 +25,19 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Bolesti">
                 <items>
-                    <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguBolesti" text="Pretraga" />
+                    <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguBolesti" text="Pretraga bolesti" />
+                    <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguVirusa" text="Pretraga virusa" />
                     <MenuItem mnemonicParsing="false" onAction="#dodavanjeNoveBolestiEkran" text="Novi zapis" />
                     <MenuItem mnemonicParsing="false" onAction="#brisanjeBolestiEkran" text="Brisanje zapisa" />
                 </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Virusi">
+       <!--     <Menu mnemonicParsing="false" text="Virusi">
                 <items>
                     <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguVirusa" text="Pretraga" />
                     <MenuItem mnemonicParsing="false" onAction="#dodavanjeNovogVirusaEkran" text="Novi zapis" />
                     <MenuItem mnemonicParsing="false" onAction="#brisanjeVirusaEkran" text="Brisanje zapisa" />
                 </items>
-            </Menu>
+            </Menu>  -->
             <Menu mnemonicParsing="false" text="Osobe">
                 <items>
                     <MenuItem mnemonicParsing="false" onAction="#prikaziEkranZaPretraguOsoba" text="Pretraga" />

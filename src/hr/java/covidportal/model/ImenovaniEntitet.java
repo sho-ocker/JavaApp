@@ -25,6 +25,10 @@ public abstract class ImenovaniEntitet implements Serializable{
     public ImenovaniEntitet() {
     }
 
+    public ImenovaniEntitet(String naziv) {
+        this.naziv = naziv;
+    }
+
     /**
      * setter naziva
      *

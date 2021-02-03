@@ -3,48 +3,55 @@ package main.java.sample;
 
 import hr.java.covidportal.enums.Simptomi;
 import hr.java.covidportal.model.Simptom;
+import hr.java.covidportal.niti.SpremiSimptomNit;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 
-public class DodavanjeNovogSimptomaController extends UnosIzDatoteka{
+public class DodavanjeNovogSimptomaController extends BazaPodataka implements Initializable {
 
     @FXML
     private TextField nazivSimptoma;
 
     @FXML
-    private RadioButton vrijednostButtonRijetko;
-
-    @FXML
-    private RadioButton vrijednostButtonSrednje;
-
-    @FXML
-    private RadioButton vrijednostButtonCesto;
+    private ListView<Simptomi> ListViewSimptoma;
 
 
-    public void dodajSimptom(){
+    public void dodajSimptom() throws IOException, SQLException, InterruptedException {
         String naziv = nazivSimptoma.getText();
-        String vrijednost = null;
+        Simptomi odabraniSimptom;
 
-        if(vrijednostButtonCesto.isSelected())
-            vrijednost = "CESTO";
-        else if(vrijednostButtonSrednje.isSelected())
-            vrijednost = vrijednostButtonSrednje.getText();
-        else if(vrijednostButtonRijetko.isSelected())
-            vrijednost = vrijednostButtonRijetko.getText();
+        odabraniSimptom = ListViewSimptoma.getSelectionModel().getSelectedItem();
+        String enumm = Simptomi.valueOf(odabraniSimptom.toString()).getVrijednost();
 
-        String enumm = Simptomi.valueOf(vrijednost).getVrijednost();
+        Long lastID = (long) listaSimptoma.size() + 1;
 
-        Long lastID = simptomiIzDat.get(simptomiIzDat.size()-1).getId() + 1;
+        if(naziv.isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Greška u spremanju");
+            alert.setContentText("Polje naziv mora biti popunjeno!");
+            alert.showAndWait();
+            return;
+        }
 
-        simptomiIzDat.add(new Simptom(naziv, enumm, lastID));
+        listaSimptoma.add(new Simptom(naziv, enumm, lastID));
 
-        try(FileWriter fw = new FileWriter("dat/simptomi.txt", true);
+        SpremiSimptomNit nitSimptom = new SpremiSimptomNit
+                ("SIMPTOMI", naziv, enumm, lastID);
+
+        service.execute(nitSimptom);
+
+       // spremiNoviSimptom(new Simptom(naziv, enumm, lastID));
+
+    /*    try(FileWriter fw = new FileWriter("dat/simptomi.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
@@ -53,7 +60,7 @@ public class DodavanjeNovogSimptomaController extends UnosIzDatoteka{
             out.print(vrijednost);
         } catch (IOException e) {
             System.err.println(e);
-        }
+        }       */
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Spremanje podatka");
@@ -62,4 +69,10 @@ public class DodavanjeNovogSimptomaController extends UnosIzDatoteka{
         logger.info("Dodan novi simptom");
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<Simptomi> list = FXCollections.observableArrayList(Simptomi.values());
+        ListViewSimptoma.setItems(list);
+        ListViewSimptoma.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
 }

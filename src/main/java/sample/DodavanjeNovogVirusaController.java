@@ -15,12 +15,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 
-public class DodavanjeNovogVirusaController extends UnosIzDatoteka implements Initializable {
+public class DodavanjeNovogVirusaController extends BazaPodataka implements Initializable {
 
     @FXML
     private TextField nazivVirusa;
@@ -29,16 +30,19 @@ public class DodavanjeNovogVirusaController extends UnosIzDatoteka implements In
     private ListView<Simptom> ListViewSimptoma;
 
 
-    public void dodajVirus(){
+    public void dodajVirus() throws SQLException, IOException, InterruptedException {
         String naziv = nazivVirusa.getText();
         ObservableList<Simptom> odabraniSimptomi;
+        Long lastIDBolesti;
 
         odabraniSimptomi = ListViewSimptoma.getSelectionModel().getSelectedItems();
+        lastIDBolesti = listaBolesti.get(listaBolesti.size()-1).getId() + 1;
 
-        Long lastID = virusiIzDat.get(virusiIzDat.size()-1).getId() + 1;
 
-        virusiIzDat.add(new Virus(naziv, odabraniSimptomi, lastID));
-        try(FileWriter fw = new FileWriter("dat/virusi.txt", true);
+        listaBolesti.add(new Virus(naziv, odabraniSimptomi, true, lastIDBolesti));
+        spremiNovuBolest(new Virus(naziv, odabraniSimptomi, true, lastIDBolesti));
+
+    /*    try(FileWriter fw = new FileWriter("dat/virusi.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
@@ -54,7 +58,7 @@ public class DodavanjeNovogVirusaController extends UnosIzDatoteka implements In
             }
         } catch (IOException e) {
             System.err.println(e);
-        }
+        }   */
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Spremanje podatka");
@@ -65,7 +69,7 @@ public class DodavanjeNovogVirusaController extends UnosIzDatoteka implements In
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ListViewSimptoma.setItems(simptomiIzDat);
+        ListViewSimptoma.setItems(listaSimptoma);
         ListViewSimptoma.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
 }

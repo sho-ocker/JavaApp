@@ -9,8 +9,6 @@ import org.slf4j.LoggerFactory;
 import static hr.java.covidportal.main.Glavna.*;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 public class UnosIzDatoteka {
     protected static ObservableList<Zupanija> zupanijeIzDat = FXCollections.observableArrayList();

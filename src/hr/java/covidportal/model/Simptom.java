@@ -8,9 +8,7 @@ import java.util.Objects;
  */
 
 public class Simptom extends ImenovaniEntitet implements Serializable {
-    private String naziv;
     private String vrijednost;
-    private Long id;
 
 
     /**
@@ -22,6 +20,11 @@ public class Simptom extends ImenovaniEntitet implements Serializable {
 
     public Simptom(String naziv, String vrijednost, Long id) {
         super(naziv, id);
+        this.vrijednost = vrijednost;
+    }
+
+    public Simptom(String naziv, String vrijednost) {
+        super(naziv);
         this.vrijednost = vrijednost;
     }
 
