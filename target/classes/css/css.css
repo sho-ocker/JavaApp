@@ -1,0 +1,24 @@
+.background{
+    -fx-background-image: url("hospital.jpg");
+    -fx-background-position: center top;
+}
+
+.welcome{
+    -fx-background-image: url("welcome.jpg");
+    -fx-background-position: center bottom;
+}
+
+.novi{
+    -fx-background-image: url("novi.jpg");
+}
+
+.delete{
+    -fx-background-image: url("delete.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 60%;
+    -fx-background-position: -40px 30px;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}

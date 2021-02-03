@@ -1,0 +1,5 @@
+bazaPodatakaUrl = jdbc:h2:tcp://localhost:9092/~/covid
+
+korisnickoIme = student
+
+lozinka = student
